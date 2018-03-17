@@ -9,3 +9,6 @@ form{
 .form-group{
     text-align:left;
 }
+li{
+    list-style-type:none;
+}

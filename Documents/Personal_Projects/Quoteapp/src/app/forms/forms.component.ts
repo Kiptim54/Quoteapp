@@ -7,19 +7,17 @@ import { Quote } from '../quote'
   styleUrls: ['./forms.component.css']
 })
 export class FormsComponent implements OnInit {
-  Quote:string[];
-  addQuote(userName,quotes,author){
-    console.log(userName,quotes,author)
-    return false;
-  }
+Quote:string[];
   
-    
+  addQuote(userName,quotes,author){
+    this.Quote.unshift(userName,quotes,author);
+    return false;
+}
+
+
 
   ngOnInit(){
-    console.log("running");
-    this.Quote.unshift(userName,quotes,author);
-    
-    
+    this.Quote=[];
 
 }
 
