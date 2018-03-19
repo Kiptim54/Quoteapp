@@ -7,10 +7,12 @@ import { Quote } from '../quote'
   styleUrls: ['./forms.component.css']
 })
 export class FormsComponent implements OnInit {
-Quote:string[];
+quotes:[
+ new Quote('Brenda Kiptim','You are your choices','Unkown')
+];
   
   addQuote(userName,quotes,author){
-    this.Quote.unshift(userName,quotes,author);
+    this.quotes.unshift(userName,quotes,author);
     return false;
 }
 
