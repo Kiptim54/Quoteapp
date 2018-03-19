@@ -1,6 +1,8 @@
 
 import { Component, OnInit } from '@angular/core';
 import { Quote } from '../quote'
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import {NgForm} from '@angular/forms';
 
 @Component({
   selector: 'app-form',
@@ -28,9 +30,9 @@ Dislike(){
   this.Dislikes-=1;
 }
   
-  addQuote(username, quota, author){
-    console.log(username, quota, author )
-    this.quotes.push(username, quota, author)
+  addQuote(username){
+    console.log(username)
+    this.quotes.push(username)
     return false;
     
 }
@@ -43,13 +45,15 @@ Dislike(){
     
 
 }
-delete(quote){
-  console.log(quote);
-  confirm("Delete quote?");
-  {this.quotes.splice(quote);
-    return false;
-}
+delete(quotes){
+  for( let i=0; i<this.quotes.length; i++){
+    if(this.quotes[i]=quotes){
+      this.quotes.splice(i,1)
+    }
+    }
+  }
+ 
 
 
 }
-}
+
