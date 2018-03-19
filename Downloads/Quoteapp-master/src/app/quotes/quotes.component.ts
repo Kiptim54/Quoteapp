@@ -13,24 +13,26 @@ export class QuotesComponent implements OnInit {
      this.quote= new Quote ("Kiptim","We are our choices","Unknown"),
       
     ];
-    
+  }  
+  Likes:number=0;
+  Like(){
+    this.Likes+=1;
+  } 
+  Dislikes:number=0;
+  Dislike(){
+    this.Dislikes+=1;
   }
 
   @Input()quote:Quote;
   
   
   
+  
     
   
-  Likes:number=0;
-  Like(){
-    this.Likes+=1;
-  }
+ 
   
-  Dislikes:number=0;
-  Dislike(){
-    this.Dislikes+=1;
-  }
+
     
     addQuote(quote){
       console.log(quote)
@@ -47,7 +49,7 @@ export class QuotesComponent implements OnInit {
       }
     }
   
-  
+    
   
   ngOnInit() {
   }
