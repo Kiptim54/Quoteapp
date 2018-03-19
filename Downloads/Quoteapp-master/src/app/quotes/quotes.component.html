@@ -1,0 +1,22 @@
+<div class="container-fluid">
+    <div class="row" id="quotes">
+        <div class="col-md-12">
+            <h3>See Quotes</h3>
+            <div class="row">
+       <div class="col-md-6" id="showquotes">
+          <div id="bg" *ngFor="let quote of quotes">
+          
+              {{quote.username}} <br>{{quote.quota}} <br>{{quote.author}}<br>
+              <button  (click)="Like()">Likes {{Likes}}</button>
+              <button  (click)="Dislike()">Dislikes {{Dislikes}}</button><br>
+              <button (click)="delete(quotes)">Clear Quote</button>
+             
+            </div>
+            
+       </div>
+                
+            </div>
+            
+        </div>
+      </div>
+</div>
