@@ -1,5 +1,5 @@
 
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Quote } from '../quote'
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {NgForm} from '@angular/forms';
@@ -11,6 +11,7 @@ import {NgForm} from '@angular/forms';
   styleUrls: ['./forms.component.css']
 })
 export class FormsComponent{
+  @Input()quote:Quote;
  
   quotes=[];
   constructor(){

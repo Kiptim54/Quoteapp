@@ -23,6 +23,9 @@ export class QuotesComponent implements OnInit {
     this.Dislikes+=1;
   }
 
+ 
+
+
   @Input()quote:Quote;
   
   
@@ -43,7 +46,7 @@ export class QuotesComponent implements OnInit {
   
   delete(quotes){
     for( let i=0; i<this.quotes.length; i++){
-      if(this.quotes[i]===quotes){
+      if(this.quotes[i]=quotes){
         this.quotes.splice(i,1)
       }
       }
