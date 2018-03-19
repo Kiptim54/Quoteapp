@@ -25,12 +25,12 @@ export class QuotesComponent implements OnInit {
   
   Dislikes:number=0;
   Dislike(){
-    this.Dislikes-=1;
+    this.Dislikes+=1;
   }
     
-    addQuote(username){
-      console.log(username)
-      this.quotes.push(username)
+    addQuote(quote){
+      console.log(quote)
+      this.quotes.push(quote)
       return false;
   
   }

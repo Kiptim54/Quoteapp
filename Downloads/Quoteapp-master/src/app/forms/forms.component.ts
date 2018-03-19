@@ -4,6 +4,7 @@ import { Quote } from '../quote'
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {NgForm} from '@angular/forms';
 
+
 @Component({
   selector: 'app-form',
   templateUrl: './forms.component.html',
