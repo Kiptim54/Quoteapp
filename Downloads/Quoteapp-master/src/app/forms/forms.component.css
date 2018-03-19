@@ -30,7 +30,7 @@ button{
     background-color: palevioletred;
     margin-top:2%;
 }
-h3, label{
+h3, label, .NgModule{
     background-color:#FFF1D2;
 }
 #showquotes{

@@ -1,4 +1,4 @@
-<button type="button"(click)="addQuote( quote)">Post Quote</button>
+<button type="button"(click)="addQuote()">Post Quote</button>
 <div class="container-fluid">
    
     <div class="row" id="quotes">
@@ -8,7 +8,7 @@
        <div class="col-md-6" id="showquotes">
           <div id="bg" *ngFor="let quote of quotes">
               
-              {{quote | json}}<br>
+              {{quote.quota}} ~{{quote.author}} <br>{{quote.username}}<br> 
               <button  (click)="Like()">Likes {{Likes}}</button>
               <button  (click)="Dislike()">Dislikes {{Dislikes}}</button><br>
               <button (click)="delete(quotes)">Clear Quote</button>

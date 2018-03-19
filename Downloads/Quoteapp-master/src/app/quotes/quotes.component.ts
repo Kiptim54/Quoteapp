@@ -7,13 +7,17 @@ import { Quote } from '../quote'
   styleUrls: ['./quotes.component.css']
 })
 export class QuotesComponent implements OnInit {
-
-  constructor() { }
-  @Input()quote:Quote;
-  quotes=[
-    new Quote ("Kiptim","We are our choices","Unknown"),
+  quotes=[];
+  constructor(){
+    this. quotes=[
+     this.quote= new Quote ("Kiptim","We are our choices","Unknown"),
+      
+    ];
     
-  ];
+  }
+
+  @Input()quote:Quote;
+  
   
   
     
@@ -37,7 +41,7 @@ export class QuotesComponent implements OnInit {
   
   delete(quotes){
     for( let i=0; i<this.quotes.length; i++){
-      if(this.quotes[i]=quotes){
+      if(this.quotes[i]===quotes){
         this.quotes.splice(i,1)
       }
       }
