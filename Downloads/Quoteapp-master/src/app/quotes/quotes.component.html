@@ -8,7 +8,7 @@
        <div class="col-md-6" id="showquotes">
           <div id="bg" *ngFor="let quote of quotes">
           
-              {{quote}} <!--<br>{{quote.quota}} <br>{{quote.author}}<br>-->
+              {{quote.username}} <!--<br>{{quote.quota}} <br>{{quote.author}}<br>-->
               <button  (click)="Like()">Likes {{Likes}}</button>
               <button  (click)="Dislike()">Dislikes {{Dislikes}}</button><br>
               <button (click)="delete(quotes)">Clear Quote</button>
