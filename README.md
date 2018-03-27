@@ -13,11 +13,11 @@ This is a web application that displays quotes and allows users to put their own
 
 ## Project setup instructions
 
-To view github page [click here.]()
+To view github page [click here.](https://github.com/Kiptim54/Quoteapp)
 
 ## link to live site on GitHub Pages
 
-[QuoteApp](https://kiptim54.github.io/Pingpong/)
+[QuoteApp](https://github.com/Kiptim54/Quoteapp)
 
 ## Technologies Used
 

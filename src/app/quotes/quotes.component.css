@@ -1,0 +1,24 @@
+#bg{
+    
+    
+    background-color:white;
+    border-left:black solid 2px;
+    margin-left:4%;
+}
+#bg p{
+    
+    line-height:0.25;
+    margin-bottom:5%;
+
+    
+}
+button{
+    background-color: palevioletred;
+    margin-top:2%;
+}
+h3, label{
+    background-color:#FFF1D2;
+}
+#showquotes{
+    margin-left:22%;
+}

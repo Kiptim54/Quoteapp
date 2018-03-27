@@ -1,0 +1,31 @@
+<div class="container-fluid">
+  <div class="row">
+  <div class="col-md-12">
+<form action="">
+    <div class="form-group">
+        <label for="Quote">Quote: </label>
+        <textarea name="Quote" cols="50" rows="10" class="form-control" #newquote></textarea>
+    </div>
+    <div class="form-group">
+            <label for="Source">Source </label>
+            <input type="text" class="form-control" name="Source" #newsource required>
+    </div>
+    <div class="form-group">
+            <label for="Username">Username </label>
+            <input type="text" class="form-control" name="Username" #newusername required>
+    </div>
+    <button type="submit" (click)='shareQuote(newquote,newsource,newusername)'> Share</button>
+</form>
+
+  </div>
+  </div>
+</div>
+<div class="container-fluid">
+<h3>See Quotes</h3>
+</div>
+<app-quotes *ngFor = "let quote of quotes" [quote]="quote" color></app-quotes>
+
+
+
+
+

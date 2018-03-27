@@ -1,0 +1,13 @@
+/*global*/
+@import "~bootstrap/dist/css/bootstrap.css";
+
+.container-fluid{
+    margin:0;
+    padding:0;
+    text-align: center;
+    background-image:url("https://www.pptgrounds.com/wp-content/uploads/2013/04/Old-Script-Text-Powerpoint-Design-Backgrounds.jpg");
+    background-repeat:no-repeat;
+    background-size:cover;
+    filter: alpha(opacity=30);
+    font-family:'Courier New', Courier, monospace;
+  }
