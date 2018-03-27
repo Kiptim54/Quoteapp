@@ -16,6 +16,14 @@ export class QuotesComponent implements OnInit {
       
     ];
   }  
+  shareQuote(quote:HTMLInputElement, source:HTMLInputElement, username:HTMLInputElement, completedate:any): boolean{
+    console.log(`Adding quote: ${quote.value} by:${source.value} submitted by: ${username.value} on ${completedate}`);
+      this.quotes.push(new Quote(quote.value, source.value, username.value, completedate));
+      quote.value = '';
+      source.value = '';
+      username.value = '';
+      return false;
+    }
   Likes:number=0;
   Like(){
     this.Likes+=1;
