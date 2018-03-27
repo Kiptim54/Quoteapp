@@ -26,7 +26,7 @@ console.log(`Adding quote: ${quote.value} by:${source.value} submitted by: ${use
   return false;
 }
 
-delete(quotes){
+delete(quote){
   for( let i=0; i<this.quotes.length; i++){
     if(this.quotes[i]=quotes){
       this.quotes.splice(i,1)
