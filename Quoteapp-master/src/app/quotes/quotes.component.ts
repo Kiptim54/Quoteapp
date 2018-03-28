@@ -1,6 +1,6 @@
 import { Component, OnInit , Input} from '@angular/core';
 import { Quote } from '../quote'
-import { Time } from '@angular/common';
+
 
 @Component({
   selector: 'app-quotes',
@@ -12,13 +12,13 @@ export class QuotesComponent implements OnInit {
   quotes=[];
   constructor(){
     this. quotes=[
-     this.quote= new Quote ("Kiptim","We are our choices","Unknown", new Date(2018,3,15)),
+     this.quote= new Quote ("Kiptim","We are our choices","Unknown"),
       
     ];
   }  
   shareQuote(quote:HTMLInputElement, source:HTMLInputElement, username:HTMLInputElement, completedate:any): boolean{
     console.log(`Adding quote: ${quote.value} by:${source.value} submitted by: ${username.value} on ${completedate}`);
-      this.quotes.push(new Quote(quote.value, source.value, username.value, completedate));
+      this.quotes.push(new Quote(quote.value, source.value, username.value));
       quote.value = '';
       source.value = '';
       username.value = '';
@@ -36,7 +36,7 @@ export class QuotesComponent implements OnInit {
   
   delete(quotes){
     for( let i=0; i<this.quotes.length; i++){
-      if(this.quotes[i]=quotes){
+      if(this.quotes=quotes){
         this.quotes.splice(i,1)
       }
       }
