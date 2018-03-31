@@ -9,6 +9,7 @@ import { FormsComponent } from './forms/forms.component';
 import { QuotesComponent } from './quotes/quotes.component';
 import { StrikethroughDirective } from './strikethrough.directive';
 import { TimeCountPipe } from './time-count.pipe';
+import { QuotedetailsComponent } from './quotedetails/quotedetails.component';
 
 
 @NgModule({
@@ -18,6 +19,7 @@ import { TimeCountPipe } from './time-count.pipe';
     QuotesComponent,
     StrikethroughDirective,
     TimeCountPipe,
+    QuotedetailsComponent,
     
   ],
   imports: [

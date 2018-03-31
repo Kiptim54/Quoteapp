@@ -8,12 +8,12 @@
        <div class="col-md-6" id="showquotes">
           <div id="bg" appStrikethrough>
               <span>
-              {{quote.quota}} ~{{quote.source}} <br>{{quote.username}}  <br>
+              {{quote.quota}} ~{{quote.source}} <br>{{quote.username}} <br>
               <button  (click)="Like()">Likes {{Likes}}</button>
               </span>
               <button  (click)="Dislike()">Dislikes {{Dislikes}}</button><br>
               <button (click)="delete(quotes)">Clear Quote</button>
-
+              <app-quotedetails></app-quotedetails>
             </div>
 
        </div>

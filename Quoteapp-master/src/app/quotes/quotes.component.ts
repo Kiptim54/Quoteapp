@@ -1,5 +1,6 @@
 import { Component, OnInit , Input} from '@angular/core';
 import { Quote } from '../quote'
+import { DatePipe } from '@angular/common';
 
 
 @Component({
@@ -16,8 +17,8 @@ export class QuotesComponent implements OnInit {
       
     ];
   }  
-  shareQuote(quote:HTMLInputElement, source:HTMLInputElement, username:HTMLInputElement, completedate:any): boolean{
-    console.log(`Adding quote: ${quote.value} by:${source.value} submitted by: ${username.value} on ${completedate}`);
+  shareQuote(quote:HTMLInputElement, source:HTMLInputElement, username:HTMLInputElement): boolean{
+    console.log(` ${quote.value} ${source.value}  ${username.value}`);
       this.quotes.push(new Quote(quote.value, source.value, username.value));
       quote.value = '';
       source.value = '';
