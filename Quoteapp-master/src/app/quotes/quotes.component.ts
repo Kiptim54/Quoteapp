@@ -13,13 +13,13 @@ export class QuotesComponent implements OnInit {
   quotes=[];
   constructor(){
     this. quotes=[
-     this.quote= new Quote ("Kiptim","We are our choices","Unknown"),
+     this.quote= new Quote ("Kiptim","We are our choices","Unknown", "8:10"),
       
     ];
   }  
-  shareQuote(quote:HTMLInputElement, source:HTMLInputElement, username:HTMLInputElement): boolean{
+  shareQuote(quote:HTMLInputElement, source:HTMLInputElement, username:HTMLInputElement, completetime:HTMLInputElement): boolean{
     console.log(` ${quote.value} ${source.value}  ${username.value}`);
-      this.quotes.push(new Quote(quote.value, source.value, username.value));
+      this.quotes.push(new Quote(quote.value, source.value, username.value, completetime.value));
       quote.value = '';
       source.value = '';
       username.value = '';

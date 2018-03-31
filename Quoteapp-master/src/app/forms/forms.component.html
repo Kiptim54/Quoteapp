@@ -14,7 +14,12 @@
             <label for="Username">Username </label>
             <input type="text" class="form-control" name="Username" #newusername required>
     </div>
-    <button type="submit" (click)='shareQuote(newquote,newsource,newusername)'> Share</button>
+    <div class="form-group">
+      <label for="Time">Time</label> 
+      <input type="time" class="form-control" name="time" #newtime required>
+</div>
+
+    <button type="submit" (click)='shareQuote(newquote,newsource,newusername,newtime)'> Share</button>
 </form>
 
   </div>

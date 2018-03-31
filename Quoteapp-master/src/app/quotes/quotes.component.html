@@ -8,7 +8,7 @@
        <div class="col-md-6" id="showquotes">
           <div id="bg" appStrikethrough>
               <span>
-              {{quote.quota}} ~{{quote.source}} <br>{{quote.username}} <br>
+                {{quote.source}} ~{{quote.quota}} <br>{{quote.username}}<br> {{quote.completetime}} <br>
               <app-quotedetails  *ngFor = "let quote of quotes" [quote]="quote" color></app-quotedetails>
             
         

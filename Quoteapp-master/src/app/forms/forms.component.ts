@@ -13,17 +13,17 @@ export class FormsComponent{
 quotes:Quote[];
  constructor(){
   this. quotes=[
-  new Quote ("Kiptim","We are our choices","Unknown"),
+  new Quote ("Kiptim","We are our choices","Unknown", " 5 hours ago"),
 
    ];
  }
- shareQuote(quote:HTMLInputElement, source:HTMLInputElement, username:HTMLInputElement): boolean{
-console.log(`Adding quote: ${quote.value} by:${source.value} submitted by: ${username.value}`);
-  this.quotes.push(new Quote(quote.value, source.value, username.value));
+ shareQuote(quote:HTMLInputElement, source:HTMLInputElement, username:HTMLInputElement, completetime:any){
+console.log(`Adding quote: ${quote.value} by:${source.value} submitted by: ${username.value} ${completetime.value}`);
+  this.quotes.push(new Quote(quote.value, source.value, username.value, completetime.value));
   quote.value = '';
   source.value = '';
   username.value = '';
-  return false;
+  
 }
 
 delete(quotes){

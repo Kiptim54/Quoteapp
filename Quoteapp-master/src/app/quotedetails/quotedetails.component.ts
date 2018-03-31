@@ -12,7 +12,7 @@ export class QuotedetailsComponent implements OnInit {
   quotes=[]
   constructor() { 
     this. quotes=[
-      this.quote= new Quote ("Kiptim","We are our choices","Unknown"),
+      this.quote= new Quote ("Kiptim","We are our choices","Unknown", new Date(2018,3,15)),
        
      ];
   }
@@ -27,9 +27,9 @@ export class QuotedetailsComponent implements OnInit {
     this.Dislikes+=1;
 
   }
-  delete(quotes){
+  delete(quote){
     for( let i=0; i<this.quotes.length; i++){
-      if(this.quotes=quotes){
+      if(this.quotes=this.quotes){
         this.quotes.splice(i,1)
       }
       }
