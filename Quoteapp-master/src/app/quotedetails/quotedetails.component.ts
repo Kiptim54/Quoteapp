@@ -1,4 +1,4 @@
-import { Component, OnInit , Input} from '@angular/core';
+import { Component, OnInit , Input, EventEmitter, Output} from '@angular/core';
 import { Quote } from '../quote'
 
 @Component({
@@ -9,6 +9,7 @@ import { Quote } from '../quote'
 export class QuotedetailsComponent implements OnInit {
 
   @Input() quote: Quote;
+  @Output() todelete= new EventEmitter();
   quotes=[]
   constructor() { 
     this. quotes=[
@@ -29,7 +30,7 @@ export class QuotedetailsComponent implements OnInit {
   }
   delete(quote){
     for( let i=0; i<this.quotes.length; i++){
-      if(this.quotes=this.quotes){
+      if(this.quote=this.quote){
         this.quotes.splice(i,1)
       }
       }
