@@ -35,13 +35,7 @@ export class QuotesComponent implements OnInit {
 
   }
   
-  delete(quotes){
-    for( let i=0; i<this.quotes.length; i++){
-      if(this.quotes=quotes){
-        this.quotes.splice(i,1)
-      }
-      }
-    }
+ 
   
     
   

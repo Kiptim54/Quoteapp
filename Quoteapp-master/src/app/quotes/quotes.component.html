@@ -9,18 +9,9 @@
           <div id="bg" appStrikethrough>
               <span>
               {{quote.quota}} ~{{quote.source}} <br>{{quote.username}} <br>
-              <button  (click)="Like()">Likes {{Likes}}</button>
-              </span>
-              <button  (click)="Dislike()">Dislikes {{Dislikes}}</button><br>
-              <button (click)="delete(quotes)">Clear Quote</button>
-              <app-quotedetails></app-quotedetails>
-            </div>
-
-       </div>
-
-            </div>
-
-        </div>
+              <app-quotedetails  *ngFor = "let quote of quotes" [quote]="quote" color></app-quotedetails>
+            
+        
 
 
 <!--{{quote.completedate | date:'shortTime'}}-->
