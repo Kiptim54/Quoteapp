@@ -28,7 +28,7 @@
 <div class="container-fluid">
 <h3>See Quotes</h3>
 </div>
-<app-quotes *ngFor = "let quote of quotes" [quote]="quote" color></app-quotes>
+<app-quotes *ngFor = "let quote of quotes" [quote]="quote" color (isComplete)='Quotedelete($event, i)'></app-quotes>
 
 
 

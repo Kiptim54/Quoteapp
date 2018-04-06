@@ -34,11 +34,16 @@ export class QuotesComponent implements OnInit {
     this.Dislikes+=1;
 
   }
-  delete(quote){
-    for( let i=0; i<this.quotes.length; i++){
-      if(this.quote=this.quote){
-        this.quotes.splice(i,1)
-      }
+  // delete(quote){
+  //   for( let i=0; i<this.quotes.length; i++){
+  //     if(this.quote=this.quote){
+  //       this.quotes.splice(i,1)
+  //     }
+  //   }
+  // }
+  Quotedelete(isComplete, index){
+    if(isComplete){
+      this.quotes.splice(index, 1)
     }
   }
  

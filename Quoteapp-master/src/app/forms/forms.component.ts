@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Quote } from '../quote';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
@@ -10,6 +10,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
   styleUrls: ['./forms.component.css']
 })
 export class FormsComponent{
+
+  @Input() quote: Quote;
+  @Output() isComplete= new EventEmitter<boolean>();
 quotes:Quote[];
  constructor(){
   this. quotes=[
@@ -26,12 +29,22 @@ console.log(`Adding quote: ${quote.value} by:${source.value} submitted by: ${use
   
 }
 
-delete(quotes){
-  for( let i=0; i<this.quotes.length; i++){
-    if(this.quotes=quotes){
-      this.quotes.splice(i,1)
-    }
+// delete(quotes){
+//   for( let i=0; i<this.quotes.length; i++){
+//     if(this.quotes=quotes){
+//       this.quotes.splice(i,1)
+//     }
+//     }
+//   }
+
+
+
+  
+  Quotedelete(isComplete, index){
+    if(isComplete){
+      this.quotes.splice(index, 1)
     }
   }
+ 
 
   }

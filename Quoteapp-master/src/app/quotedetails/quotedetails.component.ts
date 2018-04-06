@@ -9,15 +9,22 @@ import { Quote } from '../quote'
 export class QuotedetailsComponent implements OnInit {
 
   @Input() quote: Quote;
-  @Output() todelete= new EventEmitter();
-  quotes=[]
-  constructor() { 
+  @Output() isComplete= new EventEmitter<boolean>();
+  quotes=[];
+  constructor(){
     this. quotes=[
-      this.quote= new Quote ("Kiptim","We are our choices","Unknown", new Date(2018,3,15)),
-       
-     ];
-  }
-
+     this.quote= new Quote ("Kiptim","We are our choices","Unknown", "8:10"),
+      
+    ];
+  }  
+  shareQuote(quote:HTMLInputElement, source:HTMLInputElement, username:HTMLInputElement, completetime:HTMLInputElement): boolean{
+    console.log(` ${quote.value} ${source.value}  ${username.value}`);
+      this.quotes.push(new Quote(quote.value, source.value, username.value, completetime.value));
+      quote.value = '';
+      source.value = '';
+      username.value = '';
+      return false;
+    }
 
   Likes:number=0;
   Like(){
@@ -28,13 +35,16 @@ export class QuotedetailsComponent implements OnInit {
     this.Dislikes+=1;
 
   }
-  delete(quote){
-    for( let i=0; i<this.quotes.length; i++){
-      if(this.quote=this.quote){
-        this.quotes.splice(i,1)
-      }
-      }
-    }
+ deleteQuote(complete:boolean){
+   this.isComplete.emit(complete);
+ }
+ Quotedelete(isComplete, index){
+  if(isComplete){
+    this.quotes.splice(index, 1)
+  }
+}
+
+ 
  
   ngOnInit() {
   }
