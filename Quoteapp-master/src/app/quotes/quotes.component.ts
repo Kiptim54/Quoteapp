@@ -1,4 +1,4 @@
-import { Component, OnInit , Input} from '@angular/core';
+import { Component, OnInit , Input, Output, EventEmitter} from '@angular/core';
 import { Quote } from '../quote'
 import { DatePipe } from '@angular/common';
 
@@ -9,11 +9,12 @@ import { DatePipe } from '@angular/common';
   styleUrls: ['./quotes.component.css']
 })
 export class QuotesComponent implements OnInit {
+  @Output() isComplete= new EventEmitter<boolean>();
   @Input() quote: Quote;
   quotes=[];
   constructor(){
     this. quotes=[
-     this.quote= new Quote ("Kiptim","We are our choices","Unknown", "8:10"),
+     this.quote= new Quote ("Kiptim","We are our choices","Unknown", "14,03,2018"),
       
     ];
   }  
@@ -25,26 +26,13 @@ export class QuotesComponent implements OnInit {
       username.value = '';
       return false;
     }
-  Likes:number=0;
-  Like(){
-    this.Likes+=1;
-  } 
-  Dislikes:number=0;
-  Dislike(){
-    this.Dislikes+=1;
-
+  deleteQuote(complete:boolean){
+    this.isComplete.emit(complete);
   }
-  // delete(quote){
-  //   for( let i=0; i<this.quotes.length; i++){
-  //     if(this.quote=this.quote){
-  //       this.quotes.splice(i,1)
-  //     }
-  //   }
-  // }
   Quotedelete(isComplete, index){
-    if(isComplete){
-      this.quotes.splice(index, 1)
-    }
+   if(isComplete){
+     this.quotes.splice(index, 1)
+   }
   }
  
   

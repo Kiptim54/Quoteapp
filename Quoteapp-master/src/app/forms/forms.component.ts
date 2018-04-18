@@ -21,24 +21,12 @@ quotes:Quote[];
    ];
  }
  shareQuote(quote:HTMLInputElement, source:HTMLInputElement, username:HTMLInputElement, completetime:any){
-console.log(`Adding quote: ${quote.value} by:${source.value} submitted by: ${username.value} ${completetime.value}`);
   this.quotes.push(new Quote(quote.value, source.value, username.value, completetime.value));
   quote.value = '';
   source.value = '';
   username.value = '';
   
 }
-
-// delete(quotes){
-//   for( let i=0; i<this.quotes.length; i++){
-//     if(this.quotes=quotes){
-//       this.quotes.splice(i,1)
-//     }
-//     }
-//   }
-
-
-
   
   Quotedelete(isComplete, index){
     if(isComplete){

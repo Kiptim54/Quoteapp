@@ -16,7 +16,8 @@
     </div>
     <div class="form-group">
       <label for="Time">Time</label> 
-      <input type="time" class="form-control" name="time" #newtime required>
+      <!-- <input type="time" > -->
+      <input type="date" id="theDate" class="form-control" name="time" #newtime required>
 </div>
 
     <button type="submit" (click)='shareQuote(newquote,newsource,newusername,newtime)'> Share</button>
@@ -28,7 +29,7 @@
 <div class="container-fluid">
 <h3>See Quotes</h3>
 </div>
-<app-quotes *ngFor = "let quote of quotes" [quote]="quote" color (isComplete)='Quotedelete($event, i)'></app-quotes>
+<app-quotes  *ngFor = "let quote of quotes" [quote]="quote" color (isComplete)='Quotedelete($event, i)'></app-quotes>
 
 
 
