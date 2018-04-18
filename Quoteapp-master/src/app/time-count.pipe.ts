@@ -8,7 +8,7 @@ export class TimeCountPipe implements PipeTransform {
   transform(value: HTMLInputElement, args?: any): any {
     let today:any = new Date(); //get current date and time
     let todayWithNoTime:any = (today.getFullYear(),today.getMonth(),today.getDate())
-    var dateDifference =Math.abs(value-todayWithNoTime )// returns value in milliseconds
+    var dateDifference =Math.abs(todayWithNoTime )// returns value in milliseconds
     const secondsInADay= 86400; //60 seconds*60 minutes in an hour *24 hours
 
     var dateDifferenceSeconds=dateDifference*0.001; //converts to seconds

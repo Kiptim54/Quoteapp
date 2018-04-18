@@ -14,7 +14,7 @@ export class QuotesComponent implements OnInit {
   quotes=[];
   constructor(){
     this. quotes=[
-     this.quote= new Quote ("Kiptim","We are our choices","Unknown", "14,03,2018"),
+     this.quote= new Quote ("We are our choices","Unknown","Kiptim", "14,03,2018"),
       
     ];
   }  
