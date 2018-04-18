@@ -14,18 +14,11 @@ export class QuotesComponent implements OnInit {
   quotes=[];
   constructor(){
     this. quotes=[
-     this.quote= new Quote ("We are our choices","Unknown","Kiptim", "14,03,2018"),
+     this.quote= new Quote ("","","","")
       
     ];
   }  
-  shareQuote(quote:HTMLInputElement, source:HTMLInputElement, username:HTMLInputElement, completetime:HTMLInputElement): boolean{
-    console.log(` ${quote.value} ${source.value}  ${username.value}`);
-      this.quotes.push(new Quote(quote.value, source.value, username.value, completetime.value));
-      quote.value = '';
-      source.value = '';
-      username.value = '';
-      return false;
-    }
+
   deleteQuote(complete:boolean){
     this.isComplete.emit(complete);
   }

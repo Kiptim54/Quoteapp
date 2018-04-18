@@ -16,7 +16,7 @@ export class FormsComponent{
 quotes:Quote[];
  constructor(){
   this. quotes=[
-  new Quote ("Kiptim","We are our choices","Unknown", " 5 hours ago"),
+  new Quote ("We are our choices","Unknown", "Kiptim","9:03"),
 
    ];
  }

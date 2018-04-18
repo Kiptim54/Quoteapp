@@ -8,7 +8,7 @@
        <div class="col-md-6" id="showquotes">
           <div id="bg" appStrikethrough>
               <span id="quotes">
-                "{{quote.quota}}"" ~{{quote.source}}  <br>{{quote.username}}<br> {{quote.completetime |  date:'shortTime'}} <br>
+                "{{quote.quota}}" ~{{quote.source}}  <br>{{quote.username}}<br> {{quote.completetime |  date:'shortTime'}} <br>
                 <button (click)="deleteQuote(true)">Clear Quote</button>
               <app-quotedetails  *ngFor = "let quote of quotes" [quote]="quote" color (isComplete)='Quotedelete($event, i)'></app-quotedetails>
             
